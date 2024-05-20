@@ -48,7 +48,7 @@ function App() {
       setIsValidUrl(true);
       setIsLoading(true);
       axios
-        .post("http://localhost:8000/api", { link: url })
+        .post("https://subharanjans-pornsavetube.vercel.app/api", { link: url })
         .then(update)
         .catch((err) => {
           setIsLoading(false);
