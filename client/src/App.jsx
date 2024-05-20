@@ -105,7 +105,7 @@ function App() {
                 <li key={video.url} style={{listStyle:"none"}}>
                   <b>{video.quality}</b>
                   {"---> "}
-                  <a><button src={video.url}>Download</button></a>
+                  <a target="_blank" href={video.url}><button>Download</button></a>
                 </li>
               ))}
             </ul>
