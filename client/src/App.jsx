@@ -82,7 +82,7 @@ function App() {
                 height: "1.3rem",
                 margin: "1rem",
               }}
-              placeholder="eg. https://www.youtube.com/watch?v=tYIkfkGJxTE"
+              placeholder="paste any link from Pornhub,Spankbang or Xvideos"
             />
           </label>
           <button onClick={() => getInfo()} type="submit">
