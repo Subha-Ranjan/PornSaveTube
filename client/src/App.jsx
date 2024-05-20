@@ -48,7 +48,7 @@ function App() {
       setIsValidUrl(true);
       setIsLoading(true);
       axios
-        .post("https://porn-downloader.vercel.app//api", { link: url })
+        .post("https://porn-downloader.vercel.app/api", { link: url })
         .then(update)
         .catch((err) => {
           setIsLoading(false);
