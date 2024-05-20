@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 import logo from "./images/PornSaveTubeLogo.png";
-import SpankbangComponent from "./SpankbangComponent";
+
 
 function App() {
   const [url, setUrl] = useState("");
@@ -60,13 +60,12 @@ function App() {
   
   return (
     <div className="App">
-      <SpankbangComponent/>
-      <div className="conatainer">
+      
         <div className="image-wrapper">
           <img
             src={logo}
             alt="YouSaveTube_Logo"
-            width="100%"
+            width="95%"
             className="image"
           />
         </div>
@@ -101,21 +100,18 @@ function App() {
           <div>
             <h3>{videoInfo.title}   </h3>
             <p><b>Duration:</b>{videoInfo.duration} &nbsp;<b>Platorm:</b>{videoInfo.platform}</p>
-            <img src={videoInfo.image} alt="thumbnail"/>
-            <ul>
+            <img src={videoInfo.image} alt="thumbnail" height="360px"/>
+            <ul><p><b>Choose the quality to download:</b></p>
               {filesInfo?.map((video) => (
                 <li key={video.url} style={{listStyle:"none"}}>
-                  <b>{video.quality}</b>
-                  {"---> "}
-                  <a target="_blank" href={video.url}><button style={{'marginTop':'5px'}}>Download</button></a>
+                  <a target="_blank" href={video.url} ><button style={{margin:"5px"}}> <b>{video.quality}</b></button></a>
                 </li>
               ))}
             </ul>
           </div>
-        ) : null}</div>
-    }  
-        
+        ) : null}
       </div>
+    }  
     </div>
   );
 }
