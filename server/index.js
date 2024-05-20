@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 
 const routerLink = require('./router')
-
 const cors = require('cors')
 
 
@@ -37,9 +36,8 @@ const cors = require('cors')
 // console.log(details.files)
 // }
 //======================================
-app.use(cors());
 app.use(express.json());
-
+app.use(cors());
 app.get("/", (req,res)=>{
   res.status(200).send("Server is up and running!!! 🔥")
 })

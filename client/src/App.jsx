@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 import logo from "./images/PornSaveTubeLogo.png";
+import SpankbangComponent from "./SpankbangComponent";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -56,9 +57,10 @@ function App() {
         });
     }
   }
-  console.log(filesInfo)
+  
   return (
     <div className="App">
+      <SpankbangComponent/>
       <div className="conatainer">
         <div className="image-wrapper">
           <img
